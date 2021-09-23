@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    truyền vào một mảng ký tự, và một ký tự bất kỳ,-->
+<!--    kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không-->
+<!--    Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1. -->
+
+</body>
+</html>
+<script>
+    arr = ['dd', 'bb', 'cc', 'hh', 'kk']
+
+    function kiemTra(so) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == so) {
+                return so
+            }
+        } return -1
+    }
+
+    let nhapSo = prompt('Nhập kí tự');
+    let ketQua = kiemTra(nhapSo);
+    document.write(ketQua);
+</script>

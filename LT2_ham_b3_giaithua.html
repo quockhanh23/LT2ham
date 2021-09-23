@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    function giaiThua(so) {
+        let result = 1
+        if (so > 0) {
+            for (let i = 1; i <= so; i++) {
+                result = result * i
+            }
+            return result
+        }
+    }
+    let number = prompt('Nhập vào')
+    let b = giaiThua(number)
+    document.write(b)
+</script>
+
+
+<!--<script>-->
+<!--    function factorial(num) {-->
+<!--        if (num === 1) {-->
+<!--            return 1;-->
+<!--        } else {-->
+<!--            return num * factorial(num - 1);-->
+<!--        }-->
+<!--    }-->
+<!--    let a = prompt('nhap')-->
+<!--    let s = factorial(a)-->
+<!--    document.write(s)-->
+<!--</script>-->
+

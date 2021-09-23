@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td {
+            width: 150px
+        }
+    </style>
+</head>
+<body>
+<table id="list" border="1"></table>
+<input id="txt">
+<button onclick="create()">Thêm</button>
+<div id="edit-form"></div>
+</body>
+</html>
+<script>
+    let listProduct = ['xx', 'vv', 'ggg', 'tt', 'ttd', 'ff']
+    display()
+
+    function create() {
+        let product = document.getElementById('txt').value;
+        listProduct.push(product);
+        console.log(listProduct);
+        display();
+    }
+
+    function display() {
+        let str = '<tr><td>Product name</td><td></td><td>' + listProduct.length + 'products</td><tr>'
+        for (let i = 0; i < listProduct.length; i++) {
+            str += `<tr>`;
+            str += `<td>${listProduct[i]}'</td>`
+            str += `<td><button onclick="showEitForm(${i})">Edit</button></td>`
+            str += `<td><button>Delete</button></td>`
+            str += '</tr>';
+        }
+        document.getElementById('list').innerHTML = str;
+    }
+
+    function showEitForm(index) {
+        let str = `<input id="txtEdit" value="${listProduct[index]}"><button onclick ="save(${index})">save</button>`
+        document.getElementById("edit-form").innerHTML = str
+
+    }
+
+    function save(index) {
+        let newProduct = document.getElementById('txtEdit').value;
+        listProduct[index] = newProduct;
+        display()
+        document.getElementById('edit-form').innerHTML = '';
+    }
+    function del(index) {
+        listProduct[index].splice(id,1)
+        display()
+    }
+
+</script>
