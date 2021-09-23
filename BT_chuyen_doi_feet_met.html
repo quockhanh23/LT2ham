@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+    <p>
+        <label>Change feet to meters:</label>
+        <input id="inputFahrenheit1" type="number" placeholder="Change feet to meters"
+               oninput="footToMeter(this.value)"
+               onchange="footToMeter(this.value)">
+    </p>
+    <p>Celsius: <span id="outputCelsius1"></span></p>    <p>
+    <p>
+        <label>Change meters to feet:</label>
+        <input id="inputFahrenheit2" type="number" placeholder="Change meters to feet"
+               oninput="meterToFoot(this.value)"
+               onchange="meterToFoot(this.value)">
+    </p>
+    <p>Celsius: <span id="outputCelsius2"></span></p>    <p>
+
+</form>
+</body>
+</html>
+<script>
+    function footToMeter(foot) {
+        foot = parseFloat(foot);
+        document.getElementById("outputCelsius1").innerHTML = 0.305 * foot
+    }
+    function meterToFoot(meter) {
+        meter = parseFloat(meter);
+        document.getElementById("outputCelsius2").innerHTML =3.279 * meter
+    }
+</script>
