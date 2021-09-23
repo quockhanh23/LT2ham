@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    function kiemTra(so) {
+        if (so > 0 && so % 1 === 0) {
+            return true + "<br>" + "là số nguyên dương"
+        } else {
+            return false + "<br>" + "không là số nguyên dương"
+        }
+    }
+
+    let number = +prompt('Nhập vào 1 số bất kì: ')
+    let check = kiemTra(number)
+    document.write(check)
+</script>
